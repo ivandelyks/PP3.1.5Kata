@@ -13,7 +13,7 @@ public class Role implements GrantedAuthority {
     @Column(name = "role_id")
     private Long id;
 
-    @Column(name = "role_name", unique = true)
+    @Column(name = "role_name")
     private String name;
 
     public Role() {
@@ -21,6 +21,10 @@ public class Role implements GrantedAuthority {
 
     @Transient
     private Set<User> users;
+
+    public Set<User> getUsers() {
+        return users;
+    }
 
     public Role(String name) {
         this.name = name;
@@ -59,4 +63,5 @@ public class Role implements GrantedAuthority {
     public int hashCode() {
         return Objects.hash(id, name);
     }
+
 }

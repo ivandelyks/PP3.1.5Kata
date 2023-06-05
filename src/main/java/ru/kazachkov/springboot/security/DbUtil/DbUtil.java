@@ -29,11 +29,11 @@ public class DbUtil {
         Role roleUser = new Role("ROLE_USER");
         roleService.saveRole(roleAdmin);
         roleService.saveRole(roleUser);
-        User admin = new User("admin", "admin", "Ivan", "admin", Set.of(roleAdmin, roleUser));
+        User admin = new User("admin", "admin", "Ivan", "Kazachkov", Set.of(roleAdmin, roleUser));
         usersService.saveUser(admin);
 
         roleService.saveRole(roleUser);
-        User user = new User("user","user", "Fedor", "user", Set.of(roleUser));
+        User user = new User("user","user", "Fedor", "Kazachkov", Set.of(roleUser));
         usersService.saveUser(user);
     }
 }

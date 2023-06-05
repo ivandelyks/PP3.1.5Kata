@@ -55,13 +55,19 @@ public class UsersServiceImpl implements UsersService, UserDetailsService {
 
     @Transactional
     @Override
-    public void updateUser(User updatedUser, Long id) {
+    public void updateUser(User updatedUser) {
         updatedUser.setPassword(bCryptPasswordEncoder.encode(updatedUser.getPassword()));
         userRepository.save(updatedUser);
     }
 
+    @Override
+    public User findByEmail(String email) {
+        Optional<User> user = userRepository.findByEmail(email);
+        return user.orElse(null);
+    }
+
     @Transactional
-    public void removeUserById(Long id) {
+    public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
 

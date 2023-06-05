@@ -2,14 +2,12 @@ package ru.kazachkov.springboot.security.models;
 
 import org.hibernate.annotations.Cascade;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Entity
 public class User implements UserDetails{
@@ -20,12 +18,14 @@ public class User implements UserDetails{
 
     private String name;
 
-    private String lastname;
+    private String lastName;
 
-    @Column(name = "username", unique = true)
-    private String username;
+    @Column(name = "username")
+    private String userName;
 
     private String password;
+
+    private String email;
 
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -38,16 +38,20 @@ public class User implements UserDetails{
     public User() {
     }
 
-    public User(String username, String password, String name, String lastname, Set<Role> roles) {
-        this.username = username;
+    public User(String userName, String password, String name, String lastName, Set<Role> roles) {
+        this.userName = userName;
         this.password = password;
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.roles = roles;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String username) {
+        this.userName = username;
     }
 
     public void setPassword(String password) {
@@ -62,8 +66,8 @@ public class User implements UserDetails{
         this.id = id;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastname) {
+        this.lastName = lastname;
     }
 
     public void setRoles(Set<Role> roles) {
@@ -74,8 +78,8 @@ public class User implements UserDetails{
         return name;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
     public Set<Role> getRoles() {
@@ -83,17 +87,29 @@ public class User implements UserDetails{
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(roles, user.roles);
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastname='" + lastName + '\'' +
                 '}';
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(username, password, id, name, lastname);
+        return Objects.hash(userName, password, id, name, lastName);
     }
 
     @Override
@@ -106,9 +122,8 @@ public class User implements UserDetails{
         return password;
     }
 
-    @Override
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     @Override
