@@ -60,6 +60,19 @@ async function getUsers() {
 async function newUser() {
     const form = document.forms["userForm"];
 
+    const roleSelect = document.getElementById('addRoles');
+    roleSelect.innerHTML = '';
+    fetch("http://localhost:8080/api/roles")
+        .then(response => response.json())
+        .then(roles => {
+            roles.forEach(role => {
+                let option = document.createElement('option');
+                option.value = role.id;
+                option.text = role.name;
+                roleSelect.appendChild(option);
+            });
+        });
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         let addRoles = [];
@@ -69,6 +82,7 @@ async function newUser() {
                 name: form.roles.options[i].text
             })
         }
+
         fetch("http://localhost:8080/api/admin", {
             method: 'POST',
             headers: {

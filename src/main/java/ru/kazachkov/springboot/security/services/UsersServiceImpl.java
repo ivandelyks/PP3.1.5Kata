@@ -60,12 +60,6 @@ public class UsersServiceImpl implements UsersService, UserDetailsService {
         userRepository.save(updatedUser);
     }
 
-    @Override
-    public User findByEmail(String email) {
-        Optional<User> user = userRepository.findByEmail(email);
-        return user.orElse(null);
-    }
-
     @Transactional
     public void deleteUser(Long id) {
         userRepository.deleteById(id);

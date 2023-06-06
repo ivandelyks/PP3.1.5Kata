@@ -25,8 +25,6 @@ public class User implements UserDetails{
 
     private String password;
 
-    private String email;
-
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private Set<Role> roles;
