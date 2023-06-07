@@ -34,6 +34,7 @@ public class DbUtil {
 
         roleService.saveRole(roleUser);
         User user = new User("user","user", "Fedor", "Kazachkov", Set.of(roleUser));
+
         usersService.saveUser(user);
     }
 }

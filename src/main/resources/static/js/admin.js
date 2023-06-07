@@ -13,9 +13,9 @@ async function getUsers() {
             console.log(roles);
             let roleNames = "";
 
-            roles.forEach((role, index) => {
+            roles.reverse().forEach((role, index) => {
                 if (index > 0) {
-                    roleNames += ", ";
+                    roleNames += " ";
                 }
                 roleNames += role.name.replace("ROLE_", "");
             });
@@ -82,7 +82,6 @@ async function newUser() {
                 name: form.roles.options[i].text
             })
         }
-
         fetch("http://localhost:8080/api/admin", {
             method: 'POST',
             headers: {
@@ -93,7 +92,6 @@ async function newUser() {
                 name: form.firstName.value,
                 lastName: form.lastName.value,
                 userName: form.userName.value,
-                age: form.age.value,
                 password: form.password.value,
                 roles: addRoles
             })
@@ -142,7 +140,6 @@ async function updateModal(id) {
     form.firstNameUpdate.value = user.name;
     form.lastNameUpdate.value = user.lastName;
     form.userNameUpdate.value = user.userName;
-    form.ageUpdate.value = user.age;
     form.passwordUpdate.value = user.password;
 }
 
@@ -168,7 +165,6 @@ async function updateUser() {
                 name: form.firstNameUpdate.value,
                 lastName: form.lastNameUpdate.value,
                 userName: form.userNameUpdate.value,
-                age: form.ageUpdate.value,
                 password: form.passwordUpdate.value,
                 roles: updateRoles
             })

@@ -1,11 +1,9 @@
 package ru.kazachkov.springboot.security.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +28,11 @@ public class UserRestController {
     public ResponseEntity<Authentication> getUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         return ResponseEntity.ok(auth);
+    }
+
+    @GetMapping("/currentUser")
+    public ResponseEntity<User> showUser(Principal principal) {
+        User user = userService.getUserByUsername(principal.getName());
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

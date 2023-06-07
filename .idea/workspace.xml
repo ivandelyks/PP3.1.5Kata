@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b1c41e-0175-4bf9-b8f4-e37dd1631633" name="Changes" comment="bug fix">
+    <list default="true" id="28b1c41e-0175-4bf9-b8f4-e37dd1631633" name="Changes" comment="property fix + git clear">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/DbUtil/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/DbUtil/DbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/controllers/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/controllers/UserRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/services/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/services/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/services/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/services/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/DbUtil/DbUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kazachkov/springboot/security/DbUtil/DbUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,37 +46,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ivankazackov/Downloads/3.1.3.K-main/src/main/resources/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bdcaffb179ca4057e1628cc0aa6d1500&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ivankazackov/Documents/3.1.5.K/src/main/resources/static/js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "build.tools",
+    "spring.configuration.checksum": "bdcaffb179ca4057e1628cc0aa6d1500",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/kazachkov/springboot/security/services" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
@@ -109,7 +109,7 @@
       <workItem from="1685800990023" duration="19718000" />
       <workItem from="1685890575806" duration="51000" />
       <workItem from="1685890634311" duration="21677000" />
-      <workItem from="1686047182523" duration="5140000" />
+      <workItem from="1686047182523" duration="11832000" />
     </task>
     <task id="LOCAL-00001" summary="bug fix">
       <created>1685661507765</created>
@@ -125,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685662006083</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="property fix + git clear">
+      <created>1686052680093</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686052680093</updated>
+    </task>
+    <task id="LOCAL-00004" summary="property fix + git clear">
+      <created>1686052707835</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686052707835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="property fix + git clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="property fix + git clear" />
   </component>
 </project>
